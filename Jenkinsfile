@@ -39,8 +39,8 @@ PATH="${env.PATH};C:\\Users\\User\\AppData\\Local\\Programs\\DockerDesktop\\reso
 
         stage('Stop Old Container') {
             steps {
-                bat 'docker stop springboot-app || exit 0'
-                bat 'docker rm springboot-app || exit 0'
+                bat 'docker stop springboot-container || exit 0'
+                bat 'docker rm springboot-container || exit 0'
             }
         }
 
