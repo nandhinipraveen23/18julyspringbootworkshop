@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+environment{
+
+PATH="${env.PATH};C:\\Users\\User\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin"
+}
+
     tools {
         maven 'Maven3'
         jdk 'JDK26'
@@ -21,7 +26,11 @@ pipeline {
                 }
             }
         }
+	
 
+
+
+	
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t springboot-app .'
