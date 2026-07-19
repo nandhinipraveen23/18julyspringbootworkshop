@@ -16,7 +16,9 @@ pipeline {
 
         stage('Build') {
             steps {
+            dir('emprestapi'){
                 bat 'mvn clean package'
+                }
             }
         }
 
